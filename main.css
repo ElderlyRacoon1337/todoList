@@ -1,0 +1,111 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(162, 0, 255);
+    font-family: sans-serif;
+    color: white;
+}
+
+.todolist {
+    border: 3px solid rgb(116, 0, 184);
+    background-color: rgb(143, 0, 226);
+    max-width: 300px;
+    margin: 150px auto;
+    padding: 0 10px 5px 10px;
+    border-radius: 10px;
+}
+
+h2 {
+    text-align: center;
+    /* border-bottom: 1px solid rgb(116, 0, 184); */
+    line-height: 2em;
+}
+
+.itemsList {
+    list-style: none;
+}
+
+.listItem {
+    padding: 10px;
+    border-bottom: 1px solid rgb(116, 0, 184);
+    border: 1px solid rgb(116, 0, 184);
+    border-radius: 5px;
+    margin-bottom: 5px;
+    position: relative;
+}
+
+.addItem {
+    display: flex;
+    justify-content: space-between;
+}
+
+.addItem input {
+    margin: 10px 0px 5px 0px;
+    padding: 10px 10px;
+    border-radius: 5px;
+    border: none;
+    flex: 0 0 70%;
+    background-color: rgb(143, 0, 226);
+    border: 1px solid rgb(116, 0, 184);
+    color: #fff;
+}
+
+.addItem input:focus {
+    outline: none;
+    background-color: rgb(116, 0, 184);
+}
+
+::-webkit-input-placeholder {
+    color: #fff;
+}
+
+.addItem button {
+    color: #fff;
+    background-color: rgb(143, 0, 226);
+    font-size: 12px;
+    margin: 10px 0px 5px 0px;
+    border-radius: 5px;
+    border: none;
+    border: 1px solid rgb(116, 0, 184);
+    flex: 0 0 27%;
+}
+
+.addItem button:active {
+    color: #fff;
+    background-color: rgb(116, 0, 184);
+}
+
+.done {
+    /* background-color: rgb(116, 0, 184); */
+    background-color: rgb(14, 199, 14);
+}
+
+.listItem div {
+    display: none;
+    position: absolute;
+    height: 100%;
+    width: 40px;
+    top: 0px;
+    right: -0.5px;
+    bottom: 0;
+    background-color: rgb(103, 0, 163);
+    border-radius: 0px 5px 5px 0px;
+    text-align: center;
+    padding-top: 8px;
+    font-weight: 500;
+    font-size: 20px;
+    transition: all 0.1s cubic-bezier(0.24, 2.05, 0.58, 1);
+    background-color: rgb(255, 0, 0);
+}
+
+.listItem div:hover {
+    width: 50px;
+}
+
+.listItem .active {
+    display: block;
+}
